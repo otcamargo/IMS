@@ -23,4 +23,4 @@ scrape_configs:
     #metrics_path: '/rails-app/prometheus'
     scrape_interval: 1s
     static_configs:
-    - targets: ['data-gather-service_app_1:3000']
+    - targets: ['location-service_app_1:3000']
