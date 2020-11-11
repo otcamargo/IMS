@@ -29,12 +29,12 @@ EOF
 sudo systemctl daemon-reload
 sudo systemctl start node_exporter
 sudo systemctl enable node_exporter
-sudo systemctl status node_exporter
 
-sudo tee /etc/prometheus.yml <<EOF
+sudo tee /etc/prometheus/prometheus.yml <<EOF
   - job_name: 'node_exporter'
       static_configs:
         - targets: ['localhost:9100']
 EOF
 
 sudo systemctl restart prometheus
+sudo systemctl status node_exporter
